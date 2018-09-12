@@ -11,5 +11,8 @@
 <body ng-app="FoodApp" ng-controller="FoodController as vm">
     <h1>Restaurant</h1>
     <button ng-click="vm.greet()">Check Angular</button>
+    <ul>
+        <li ng-repeat="food in vm.foods">{{food}}</li>
+    </ul>
 </body>
 </html>
