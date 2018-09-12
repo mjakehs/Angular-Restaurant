@@ -11,9 +11,10 @@
 <body ng-app="FoodApp" ng-controller="FoodController as vm">
     <h1>Restaurant</h1>
     <input type="text" placeholder="food" ng-model="vm.inputFood">
-    <button ng-click="vm.addFood(vm.inputFood)">Add Food</button>
+    <input type="number" placeholder="deliciousness 1 to 100" ng-model="vm.inputDelicious">
+    <button ng-click="vm.addFood(vm.inputFood, vm.inputDelicious)">Add Food</button>
     <ul>
-        <li ng-repeat="food in vm.foods">{{food}}</li>
+        <li ng-repeat="food in vm.foods">{{food.name}} has a delicousness of {{food.deliciousness}}</li>
     </ul>
 </body>
 </html>
